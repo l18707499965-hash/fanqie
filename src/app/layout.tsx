@@ -11,7 +11,8 @@ export const metadata: Metadata = {
   metadataBase: new URL(base),
   title: {
     default: siteConfig.title,
-    template: `%s | ${siteConfig.name} 官方网站`,
+    // 品牌词置顶，强化关键词相关性
+    template: `${siteConfig.name} - %s`,
   },
   description: siteConfig.description,
   keywords: [...siteConfig.keywords],

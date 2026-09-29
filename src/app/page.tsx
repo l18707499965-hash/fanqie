@@ -16,7 +16,7 @@ import { Reveal } from '@/components/site/reveal';
 import { siteConfig } from '@/lib/site';
 
 export const metadata: Metadata = {
-  title: '高清流畅免费影视聚合 - 海量电影电视剧综艺动漫',
+  title: '番茄影视 - 高清流畅免费影视聚合，海量电影电视剧综艺动漫下载',
   description:
     '番茄影视是一款高清流畅的安卓免费影视聚合应用，覆盖电影、电视剧、综艺、动漫等海量片库，支持清晰度切换、在线缓存离线看片、智能历史记录。立即下载安卓版 App，免费畅享沉浸观影。',
   alternates: { canonical: '/' },
