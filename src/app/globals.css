@@ -54,73 +54,82 @@
     'Times New Roman', Times, serif;
 }
 
+/* ===== 番茄影视「暗夜影院」主题 ===== */
 :root {
-  --radius: 0.625rem;
-  --background: oklch(1 0 0);
-  --foreground: oklch(0.145 0 0);
-  --card: oklch(1 0 0);
-  --card-foreground: oklch(0.145 0 0);
-  --popover: oklch(1 0 0);
-  --popover-foreground: oklch(0.145 0 0);
-  --primary: oklch(0.205 0 0);
-  --primary-foreground: oklch(0.985 0 0);
-  --secondary: oklch(0.97 0 0);
-  --secondary-foreground: oklch(0.205 0 0);
-  --muted: oklch(0.97 0 0);
-  --muted-foreground: oklch(0.556 0 0);
-  --accent: oklch(0.97 0 0);
-  --accent-foreground: oklch(0.205 0 0);
+  --radius: 0.75rem;
+
+  /* 源自 Logo 的品牌渐变 */
+  --brand-1: #ff4e6b; /* 番茄粉 */
+  --brand-2: #ff8a3d; /* 暖橙红 */
+
+  /* 背景与前景（影院黑暗 + 灰白文字） */
+  --background: oklch(0.105 0.006 300 / 1);
+  --foreground: oklch(0.95 0.006 80);
+  --card: oklch(0.145 0.007 300 / 1);
+  --card-foreground: oklch(0.95 0.006 80);
+  --popover: oklch(0.13 0.007 300 / 1);
+  --popover-foreground: oklch(0.95 0.006 80);
+  --primary: #ff5f63;
+  --primary-foreground: oklch(0.99 0.005 80);
+  --secondary: oklch(0.19 0.008 300 / 1);
+  --secondary-foreground: oklch(0.95 0.006 80);
+  --muted: oklch(0.17 0.008 300 / 1);
+  --muted-foreground: oklch(0.66 0.008 80);
+  --accent: oklch(0.19 0.008 300 / 1);
+  --accent-foreground: oklch(0.95 0.006 80);
   --destructive: oklch(0.577 0.245 27.325);
-  --border: oklch(0.922 0 0);
-  --input: oklch(0.922 0 0);
-  --ring: oklch(0.708 0 0);
-  --chart-1: oklch(0.646 0.222 41.116);
-  --chart-2: oklch(0.6 0.118 184.704);
-  --chart-3: oklch(0.398 0.07 227.392);
-  --chart-4: oklch(0.828 0.189 84.429);
-  --chart-5: oklch(0.769 0.188 70.08);
-  --sidebar: oklch(0.985 0 0);
-  --sidebar-foreground: oklch(0.145 0 0);
-  --sidebar-primary: oklch(0.205 0 0);
-  --sidebar-primary-foreground: oklch(0.985 0 0);
-  --sidebar-accent: oklch(0.97 0 0);
-  --sidebar-accent-foreground: oklch(0.205 0 0);
-  --sidebar-border: oklch(0.922 0 0);
-  --sidebar-ring: oklch(0.708 0 0);
+  --border: oklch(0.28 0.01 300 / 1);
+  --input: oklch(0.24 0.01 300 / 1);
+  --ring: #ff5f63;
+  --chart-1: #ff5f63;
+  --chart-2: #ff8a3d;
+  --chart-3: #ffb46b;
+  --chart-4: #ff7a8a;
+  --chart-5: #ff9d5c;
+  --sidebar: oklch(0.12 0.007 300 / 1);
+  --sidebar-foreground: oklch(0.95 0.006 80);
+  --sidebar-primary: #ff5f63;
+  --sidebar-primary-foreground: oklch(0.99 0.005 80);
+  --sidebar-accent: oklch(0.19 0.008 300 / 1);
+  --sidebar-accent-foreground: oklch(0.95 0.006 80);
+  --sidebar-border: oklch(0.28 0.01 300 / 1);
+  --sidebar-ring: #ff5f63;
+
+  color-scheme: dark;
 }
 
 .dark {
-  --background: oklch(0.145 0 0);
-  --foreground: oklch(0.985 0 0);
-  --card: oklch(0.205 0 0);
-  --card-foreground: oklch(0.985 0 0);
-  --popover: oklch(0.205 0 0);
-  --popover-foreground: oklch(0.985 0 0);
-  --primary: oklch(0.922 0 0);
-  --primary-foreground: oklch(0.205 0 0);
-  --secondary: oklch(0.269 0 0);
-  --secondary-foreground: oklch(0.985 0 0);
-  --muted: oklch(0.269 0 0);
-  --muted-foreground: oklch(0.708 0 0);
-  --accent: oklch(0.269 0 0);
-  --accent-foreground: oklch(0.985 0 0);
+  --background: oklch(0.105 0.006 300 / 1);
+  --foreground: oklch(0.95 0.006 80);
+  --card: oklch(0.145 0.007 300 / 1);
+  --card-foreground: oklch(0.95 0.006 80);
+  --popover: oklch(0.13 0.007 300 / 1);
+  --popover-foreground: oklch(0.95 0.006 80);
+  --primary: #ff5f63;
+  --primary-foreground: oklch(0.99 0.005 80);
+  --secondary: oklch(0.19 0.008 300 / 1);
+  --secondary-foreground: oklch(0.95 0.006 80);
+  --muted: oklch(0.17 0.008 300 / 1);
+  --muted-foreground: oklch(0.66 0.008 80);
+  --accent: oklch(0.19 0.008 300 / 1);
+  --accent-foreground: oklch(0.95 0.006 80);
   --destructive: oklch(0.704 0.191 22.216);
-  --border: oklch(1 0 0 / 10%);
-  --input: oklch(1 0 0 / 15%);
-  --ring: oklch(0.556 0 0);
-  --chart-1: oklch(0.488 0.243 264.376);
-  --chart-2: oklch(0.696 0.17 162.48);
-  --chart-3: oklch(0.769 0.188 70.08);
-  --chart-4: oklch(0.627 0.265 303.9);
-  --chart-5: oklch(0.645 0.246 16.439);
-  --sidebar: oklch(0.205 0 0);
-  --sidebar-foreground: oklch(0.985 0 0);
-  --sidebar-primary: oklch(0.488 0.243 264.376);
-  --sidebar-primary-foreground: oklch(0.985 0 0);
-  --sidebar-accent: oklch(0.269 0 0);
-  --sidebar-accent-foreground: oklch(0.985 0 0);
-  --sidebar-border: oklch(1 0 0 / 10%);
-  --sidebar-ring: oklch(0.556 0 0);
+  --border: oklch(0.28 0.01 300 / 1);
+  --input: oklch(0.24 0.01 300 / 1);
+  --ring: #ff5f63;
+  --chart-1: #ff5f63;
+  --chart-2: #ff8a3d;
+  --chart-3: #ffb46b;
+  --chart-4: #ff7a8a;
+  --chart-5: #ff9d5c;
+  --sidebar: oklch(0.12 0.007 300 / 1);
+  --sidebar-foreground: oklch(0.95 0.006 80);
+  --sidebar-primary: #ff5f63;
+  --sidebar-primary-foreground: oklch(0.99 0.005 80);
+  --sidebar-accent: oklch(0.19 0.008 300 / 1);
+  --sidebar-accent-foreground: oklch(0.95 0.006 80);
+  --sidebar-border: oklch(0.28 0.01 300 / 1);
+  --sidebar-ring: #ff5f63;
 }
 
 @layer base {
@@ -128,10 +137,121 @@
     @apply border-border outline-ring/50;
   }
   body {
-    @apply bg-background text-foreground;
+    @apply bg-background text-foreground font-sans;
   }
 }
 
-body {
-  @apply font-sans;
+/* ===== 自定义品牌工具类 ===== */
+
+/* 品牌渐变文本 */
+.brand-text {
+  background: linear-gradient(100deg, #ff8a3d 0%, #ff5f63 55%, #ff4e6b 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+/* 品牌渐变背景 */
+.brand-gradient {
+  background-image: linear-gradient(100deg, #ff8a3d 0%, #ff5f63 60%, #ff4e6b 100%);
+}
+
+/* 柔和的品牌辉光 */
+.brand-glow {
+  box-shadow:
+    0 0 24px rgba(255, 95, 99, 0.28),
+    0 0 60px rgba(255, 138, 61, 0.18);
+}
+
+/* 顶部荧光带 / 分区渐变光晕背景 */
+.glow-ring {
+  background: radial-gradient(
+    50% 60% at 50% 0%,
+    rgba(255, 95, 99, 0.18) 0%,
+    rgba(255, 138, 61, 0.08) 45%,
+    transparent 100%
+  );
+}
+
+/* 卡片悬停 */
+.reveal-card {
+  transition:
+    transform 0.35s cubic-bezier(0.22, 1, 0.36, 1),
+    border-color 0.35s ease,
+    box-shadow 0.35s ease;
+}
+.reveal-card:hover {
+  transform: translateY(-4px);
+  border-color: rgba(255, 95, 99, 0.55);
+  box-shadow:
+    0 18px 40px -18px rgba(255, 95, 99, 0.4),
+    0 0 0 1px rgba(255, 95, 99, 0.18);
+}
+
+/* 滚动淡入 */
+.fade-up {
+  opacity: 0;
+  transform: translateY(18px);
+  transition:
+    opacity 0.6s ease,
+    transform 0.6s cubic-bezier(0.22, 1, 0.36, 1);
+}
+.fade-up.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+@media (prefers-reduced-motion: reduce) {
+  .fade-up {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+}
+
+/* 柔和发光动效 */
+@keyframes pulse-glow {
+  0%,
+  100% {
+    box-shadow: 0 0 18px rgba(255, 95, 99, 0.28), 0 0 46px rgba(255, 138, 61, 0.16);
+  }
+  50% {
+    box-shadow: 0 0 30px rgba(255, 95, 99, 0.48), 0 0 70px rgba(255, 138, 61, 0.3);
+  }
+}
+.pulse-glow {
+  animation: pulse-glow 3.6s ease-in-out infinite;
+}
+
+/* 平滑滚动 */
+html {
+  scroll-behavior: smooth;
+}
+
+/* 正文排版 */
+.prose-brand {
+  line-height: 1.9;
+  color: color-mix(in oklab, var(--foreground) 78%, transparent);
+}
+.prose-brand h2 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--foreground);
+  margin: 1.8rem 0 0.8rem;
+  letter-spacing: -0.02em;
+}
+.prose-brand p {
+  margin: 0.9rem 0;
+}
+.prose-brand ul {
+  margin: 0.9rem 0;
+  padding-left: 1.2rem;
+  list-style: disc;
+}
+.prose-brand li {
+  margin: 0.4rem 0;
+}
+.prose-brand a {
+  color: #ff8a8f;
+  text-decoration: underline;
+  text-underline-offset: 3px;
 }

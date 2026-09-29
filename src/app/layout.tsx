@@ -1,58 +1,72 @@
 import type { Metadata } from 'next';
 import './globals.css';
+import { SiteHeader } from '@/components/site/header';
+import { SiteFooter } from '@/components/site/footer';
+import { BaiduAnalytics } from '@/components/site/analytics';
+import { siteConfig } from '@/lib/site';
+
+const base = siteConfig.baseUrl;
 
 export const metadata: Metadata = {
+  metadataBase: new URL(base),
   title: {
-    default: '新应用 | 扣子编程',
-    template: '%s | 扣子编程',
+    default: siteConfig.title,
+    template: `%s | ${siteConfig.name} 官方网站`,
   },
-  description:
-    '扣子编程是一款一站式云端 Vibe Coding 开发平台。通过对话轻松构建智能体、工作流和网站，实现从创意到上线的无缝衔接。',
-  keywords: [
-    '扣子编程',
-    'Coze Code',
-    'Vibe Coding',
-    'AI 编程',
-    '智能体搭建',
-    '工作流搭建',
-    '网站搭建',
-    '网站部署',
-    '全栈开发',
-    'AI 工程师',
-  ],
-  authors: [{ name: 'Coze Code Team', url: 'https://code.coze.cn' }],
-  generator: 'Coze Code',
-  // icons: {
-  //   icon: '',
-  // },
+  description: siteConfig.description,
+  keywords: [...siteConfig.keywords],
+  authors: [{ name: siteConfig.name }],
+  applicationName: siteConfig.name,
+  alternates: {
+    canonical: '/',
+  },
   openGraph: {
-    title: '扣子编程 | 你的 AI 工程师已就位',
-    description:
-      '我正在使用扣子编程 Vibe Coding，让创意瞬间上线。告别拖拽，拥抱心流。',
-    url: 'https://code.coze.cn',
-    siteName: '扣子编程',
+    title: siteConfig.title,
+    description: siteConfig.description,
+    url: '/',
+    siteName: siteConfig.name,
     locale: 'zh_CN',
     type: 'website',
-    // images: [
-    //   {
-    //     url: '',
-    //     width: 1200,
-    //     height: 630,
-    //     alt: '扣子编程 - 你的 AI 工程师',
-    //   },
-    // ],
+    images: [
+      {
+        url: '/logo.png',
+        width: 512,
+        height: 512,
+        alt: siteConfig.name,
+      },
+    ],
   },
-  // twitter: {
-  //   card: 'summary_large_image',
-  //   title: 'Coze Code | Your AI Engineer is Here',
-  //   description:
-  //     'Build and deploy full-stack applications through AI conversation. No env setup, just flow.',
-  //   // images: [''],
-  // },
+  twitter: {
+    card: 'summary',
+    title: siteConfig.title,
+    description: siteConfig.description,
+    images: ['/logo.png'],
+  },
+  icons: {
+    icon: '/logo.png',
+    apple: '/logo.png',
+  },
   robots: {
     index: true,
     follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
+    },
   },
+  verification: {
+    // 站点验证（按部署后实际分配到控制台的值替换）
+    google: 'PLACEHOLDER_GOOGLE_SITE_VERIFICATION',
+    other: {
+      'baidu-site-verification': 'PLACEHOLDER_BAIDU_SITE_VERIFICATION',
+      'msvalidate.01': 'PLACEHOLDER_BING_SITE_VERIFICATION',
+    },
+  },
+  category: 'entertainment',
+  creator: siteConfig.name,
+  publisher: siteConfig.name,
 };
 
 export default function RootLayout({
@@ -60,10 +74,40 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  const websiteJsonLd = {
+    '@context': 'https://schema.org',
+    '@type': 'WebSite',
+    name: siteConfig.name,
+    alternateName: '番茄影视app 官网',
+    url: base,
+    description: siteConfig.description,
+    inLanguage: 'zh-CN',
+  };
+  const orgJsonLd = {
+    '@context': 'https://schema.org',
+    '@type': 'Organization',
+    name: siteConfig.name,
+    url: base,
+    logo: `${base}/logo.png`,
+    brand: siteConfig.name,
+  };
+
   return (
-    <html lang="en">
-      <body className={`antialiased`}>
-        {children}
+    <html lang="zh-CN" className="dark">
+      <body className="antialiased">
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteJsonLd) }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(orgJsonLd) }}
+        />
+        <div className="glow-ring pointer-events-none fixed inset-x-0 top-0 -z-10 h-[520px]" />
+        <SiteHeader />
+        <main>{children}</main>
+        <SiteFooter />
+        <BaiduAnalytics />
       </body>
     </html>
   );
